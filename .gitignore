@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+build/
+dist/
+
+# Data and artifacts
+data/pages/*
+!data/raw/.gitkeep
+!data/pages/.gitkeep
+indexes/
+*.safetensors
+*.pt
+*.bin
+
+# Notebooks / editors / OS
+.ipynb_checkpoints/
+.vscode/*
+!.vscode/settings.json
+.DS_Store
+Thumbs.db

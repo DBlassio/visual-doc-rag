@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docrag"
+version = "0.1.0"
+description = "Visual document retrieval over public PDF reports (late interaction, LoRA, evaluation-first)."
+requires-python = ">=3.11"
+dependencies = [
+    "pypdfium2",
+    "pillow",
+    "python-dotenv",
+    "requests",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
